@@ -5,6 +5,7 @@ import { buttonVariants } from "./ui/button";
 import { Icons } from "./icon";
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
+import { ThemeToggle } from "./theme-toggle";
 
 export function SiteHeader() {
     return (
@@ -21,6 +22,7 @@ export function SiteHeader() {
                             </div>
                         </Link>
                     </nav>
+                    <ThemeToggle/>
                     <MobileNav/>
                 </div>
             </div>
