@@ -18,7 +18,7 @@ const posts = defineCollection({
         description: s.string().max(999).optional(),
         date: s.isodate(),
         published: s.boolean().default(true),
-        content: s.mdx(), // transform markdown to html
+        body: s.mdx(), // transform markdown to html
         cover: s.image().optional(), // input image relative path, output image object with blurImage.
         video: s.file().optional(), // input file relative path, output file public path.
     })

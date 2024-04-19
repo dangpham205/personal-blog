@@ -1,4 +1,5 @@
 import { posts } from "#site/content"
+import { MDXContent } from "@/components/mdx-component"
 import { notFound } from "next/navigation"
 
 interface PostPageProps {
@@ -28,5 +29,6 @@ export default async function PostPage({params}: PostPageProps) {
         <h1 className="mb-2">{post.title}</h1>
         {post.description ? (<p className="text-xl mt-0 text-muted-foreground">{post.description}</p>) : null}
         <hr className="my-4"/>
+        <MDXContent code={post.body}/>
     </article>
 }
