@@ -11,10 +11,10 @@ export default function Home() {
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
         <div className="containter flex flex-col gap-4 text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black">
-            Hi, I'm Dang.
+            Hi, I&apos;m Dang.
           </h1>
           <span className="text-muted-foreground">
-            (But you can call me Damiens :P I got it from a character in 1 of my favorite mangas <i>"Innocent"</i>)
+            (But you can call me Damiens :P I got it from a character in 1 of my favorite mangas <i>&quot;Innocent&quot;</i>)
           </span>
           <p className="max-w-[42rem] mx-auto text-muted-foreground sm:text-xl text-balance">
             Welcome to my blog website

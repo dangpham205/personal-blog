@@ -35,7 +35,7 @@ export default async function BlogPage({searchParams}: BlogPageProps) {
                     This is where I post my documents/notes about concepts, technologies and system design.
                 </p>
                 <span className="text-md text-muted-foreground">
-                    (So that I won't forgot stuffs lol)
+                    (So that I won&apos;t forgot stuffs lol)
                 </span>
             </div>
         </div>

@@ -21,7 +21,7 @@ export function MobileNav() {
                 </Button>
             </SheetTrigger>
             <SheetContent side="right">
-                <MobileLink href="/" className="flex items-center">
+                <MobileLink href="/" onOpenChange={setOpen} className="flex items-center">
                     <Icons.Logo className="mr-2 h-4 w-4"/>
                     <span className="font-bold">{siteConfig.name}</span>
                 </MobileLink>
@@ -45,6 +45,7 @@ export function MobileNav() {
 interface MobileLinkProps extends LinkProps {
     children: React.ReactNode;
     onOpenChange?: (open: boolean) => void
+    className?: string
 }
 
 function MobileLink({
@@ -55,12 +56,14 @@ function MobileLink({
     ...props
 }: MobileLinkProps) {
     const router = useRouter()
-    return <Link href={href} onClick={() => {
-        router.push(href.toString())
-        onOpenChange?.(false)
-    }}
-    className={className}
-    {...props}
+    return <Link
+        href={href}
+        onClick={() => {
+            router.push(href.toString())
+            onOpenChange?.(false)
+        }}
+        className={className}
+        {...props}
     >
         {children}
     </Link>
