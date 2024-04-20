@@ -2,8 +2,15 @@ import {posts} from "#site/content"
 import { PostItem } from "@/components/post-item"
 import { sortPosts } from '../../lib/utils';
 import { QueryPagination } from "@/components/query-pagination";
+import { Metadata } from "next";
 
-const POSTS_PER_PAGE = 1
+// default SEO settings for each page
+export const metadata: Metadata = {
+    title: "Blogs",
+    description: "Information about me"
+}
+
+const POSTS_PER_PAGE = 10
 
 interface BlogPageProps {
     searchParams: {
