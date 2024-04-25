@@ -28,7 +28,9 @@ export default async function BlogPage({searchParams}: BlogPageProps) {
         POSTS_PER_PAGE * (currentPage - 1),
         POSTS_PER_PAGE * currentPage
     )
-    const tags = getAllTags(posts)
+
+    const publishedPosts = posts.filter(post => post.published)
+    const tags = getAllTags(publishedPosts)
     const sortedTags = sortTagsByCount(tags)
 
     return <div className="container max-w-4xl py-6 lg:py-10">
