@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 }
 
 const Scene = dynamic(() => import('@/components/scene'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <div className="flex flex-col text-center h-1/2 items-center justify-center">
+        <span>holdup</span>
+    </div>,
     ssr: false
 })
 
