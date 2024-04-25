@@ -13,9 +13,6 @@ export default function Home() {
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black">
             Hi, I&apos;m Dang.
           </h1>
-          <span className="text-muted-foreground">
-            (But you can call me Damiens :P I got it from a character in 1 of my favorite mangas <i>&quot;Innocent&quot;</i>)
-          </span>
           <p className="max-w-[42rem] mx-auto text-muted-foreground sm:text-xl text-balance">
             Welcome to my blog website
           </p>
@@ -32,7 +29,13 @@ export default function Home() {
         </h2>
         <ul className="flex flex-col">
           {latestPosts.map(post=> <li key={post.slug} className="first:border-t first:border-border">
-             <PostItem slug={post.slug} title={post.title} description={post.description} date={post.date}/>
+              <PostItem
+                slug={post.slug}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                tags={post.tags}
+              />
           </li>)}
         </ul>
       </section>
