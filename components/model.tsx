@@ -3,7 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { useRef } from "react"
 
 export default function Model() {
-    const mesh = useRef()
+    const mesh = useRef<any>(null)
     const {nodes} = useGLTF('/torrus.glb')
     const {viewport} = useThree()
     useFrame(() => {
