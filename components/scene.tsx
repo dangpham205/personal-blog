@@ -12,7 +12,7 @@ export default function Scene() {
             <directionalLight intensity={3} position={[0,3,2]}/>
             <Environment preset="city"/>
             <TransparentDonut/>
-            <Swat position={[-0.2,0,0]}/>
+            <Swat position={[-0.22,0,0]}/>
         </Canvas>
     )
 }

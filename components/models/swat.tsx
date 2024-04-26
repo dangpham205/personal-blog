@@ -12,7 +12,7 @@ export default function Swat({...props}: any) {
     })
     return (
         <group {...props} scale={ viewport.width*20 }>
-            <mesh ref={mesh} {...nodes.swatGroup65355} >{/*   // @ts-ignore */}
+            <mesh ref={mesh} {...nodes.swatGroup65355} >
             </mesh>
         </group>
     )
