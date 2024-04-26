@@ -11,7 +11,7 @@ export default function TransparentDonut() {
         mesh.current.rotation.x += 0.02
     })
     return (
-        <group scale={ viewport.width/2 }>
+        <group scale={ viewport.width/4 }>
             <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, 0.3, -0.5]}>
                 &quot;Preoccupied with a single leaf...
             </Text>

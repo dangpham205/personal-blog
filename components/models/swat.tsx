@@ -11,7 +11,7 @@ export default function Swat({...props}: any) {
         mesh.current.rotation.z += 0.02
     })
     return (
-        <group {...props} scale={ viewport.width*20 }>
+        <group {...props} scale={ viewport.width*9 }>
             <mesh ref={mesh} {...nodes.swatGroup65355} >
             </mesh>
         </group>
