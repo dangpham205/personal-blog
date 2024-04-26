@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default async function TagsPage() {
-    const tags = getAllTags(posts)
+    const tags = getAllTags(posts.filter(post => post.published))
     const sortedTags = sortTagsByCount(tags)
 
     return <div className="container max-w-4xl py-6 lg:py-10">

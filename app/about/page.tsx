@@ -1,4 +1,3 @@
-// import { Scene } from "@/components/scene";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
@@ -39,6 +38,7 @@ export default async function AboutPage() {
             </div>
             <div className="text-start">
                 <p className="text-muted-foreground text-lg py-4">
+                    <a href="/map-1">lets go</a>
                 </p>
             </div>
         </div>

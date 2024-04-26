@@ -31,8 +31,9 @@ export default function TagPage({ params }: TagPageProps) {
     const {tag} = params
     const title = tag.split("-").join(" ")
 
-    const displayPosts = getPostsByTagSlug(posts, tag)
-    const tags = getAllTags(posts)
+    const publishedPosts = posts.filter(post => post.published)
+    const displayPosts = getPostsByTagSlug(publishedPosts, tag)
+    const tags = getAllTags(publishedPosts)
     const sortedTags= sortTagsByCount(tags)
 
     return <div className="container max-w-4xl py-6 lg:py-10">
