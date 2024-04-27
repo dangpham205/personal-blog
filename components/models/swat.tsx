@@ -7,11 +7,11 @@ export default function Swat({...props}: any) {
     const mesh = useRef<any>(null)
     const {nodes} = useGLTF('/swat.glb')
     const {viewport} = useThree()
-    useFrame(() => {
-        mesh.current.rotation.z += 0.02
-    })
+    // useFrame(() => {
+    //     mesh.current.rotation.z += 0.02
+    // })
     return (
-        <group {...props} scale={ viewport.width*9 }>
+        <group {...props}>
             <mesh ref={mesh} {...nodes.swatGroup65355} >
             </mesh>
         </group>

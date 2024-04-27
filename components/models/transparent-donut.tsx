@@ -2,7 +2,7 @@ import { useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei"
 import { useFrame, useThree } from "@react-three/fiber"
 import { useRef } from "react"
 
-export default function TransparentDonut() {
+export default function TransparentDonut({...props}: any) {
     const mesh = useRef<any>(null)
     const {nodes} = useGLTF('/torrus.glb')
     // const {nodes} = useGLTF('/swat.glb')
@@ -11,17 +11,17 @@ export default function TransparentDonut() {
         mesh.current.rotation.x += 0.02
     })
     return (
-        <group scale={ viewport.width/4 }>
-            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, 0.3, -0.5]}>
+        <group scale={ viewport.width/3 } {...props}>
+            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, 0.3, -0.53]}>
                 &quot;Preoccupied with a single leaf...
             </Text>
-            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, 0.1, -0.5]}>
+            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, 0.1, -0.53]}>
                 you won&apos;t see the tree.
             </Text>
-            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, -0.1, -0.5]}>
+            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, -0.1, -0.53]}>
                 Preoccupied with a single tree...
             </Text>
-            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, -0.3, -0.5]}>
+            <Text fontSize={0.1} font='/fonts/dreamorphans.ttf' position={[0, -0.3, -0.53]}>
                 you&apos;ll miss the entire forest.&quot;
             </Text>
             <mesh ref={mesh} {...nodes.Torus002}>

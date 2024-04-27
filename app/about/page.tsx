@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Information about me"
 }
 
-const Scene = dynamic(() => import('@/components/scene'), {
+const Scene = dynamic(() => import('@/components/scenes/scene'), {
     loading: () => <div className="flex flex-col text-center h-1/2 items-center justify-center">
         <span>holdup</span>
     </div>,
@@ -39,12 +39,15 @@ export default async function AboutPage() {
                 </div>
                 <div className="text-start">
                     <p className="text-muted-foreground text-lg py-4">
-                        <a href="/map-1">lets go</a>
+                        <a href="/map-1">play some music</a>
+                    </p>
+                    <p className="text-muted-foreground text-lg py-4">
+                        <a href="/map-2">play some game</a>
                     </p>
                 </div>
             </div>
         </div>
-        <div className="h-screen px-48">
+        <div className="h-screen px-0 lg:px-48 md:px-0 sm:px-0">
             <Scene/>
         </div>
     </div>
